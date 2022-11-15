@@ -39,43 +39,55 @@ function changeItem(arr, targetNum, newNum) {
 
 /// Iteration 4: orderByDate
 
-/* Your code goes here */
+function orderByDate(arrOfObjects) {
+    return arrOfObjects.sort((a, b) => {
+        if (a.year > b.year) {
+            return 1;
+        }
+        if (a.year < b.year) {
+            return -1;
+        }
+        if (a.year === b.year) {
+            return 1;
+        }
+    });
+}
 
 // Iteration 4 tests:
-// const birthdays = [
-//   {
-//     name: 'Bob',
-//     year: 1989,
-//   },
-//   {
-//     name: 'Rosita',
-//     year: 1990,
-//   },
-//   {
-//     name: 'Stevie',
-//     year: 1988,
-//   },
-//   {
-//     name: 'Marlon',
-//     year: 1979,
-//   },
-// ]
-// const importantDates = [
-//   {
-//     title: 'Wedding aniversary',
-//     year: 2014,
-//   },
-//   {
-//     name: "Daddy's birthday",
-//     year: 2013,
-//   },
-//   {
-//     name: 'Graduation party',
-//     year: 2019,
-//   }
-// ]
-// console.log(orderByDate(birthdays)) // Should return them ordered 1979, 1988, 1989, 1990
-// console.log(orderByDate(importantDates)) // Should return them ordered 2013, 2014, 2019
+ const birthdays = [
+   {
+     name: 'Bob',
+     year: 1989,
+   },
+   {
+     name: 'Rosita',
+     year: 1990,
+   },
+   {
+     name: 'Stevie',
+     year: 1988,
+   },
+   {
+     name: 'Marlon',
+     year: 1979,
+   },
+ ]
+ const importantDates = [
+   {
+     title: 'Wedding aniversary',
+     year: 2014,
+   },
+   {
+     name: "Daddy's birthday",
+     year: 2013,
+   },
+   {
+     name: 'Graduation party',
+     year: 2019,
+   }
+ ]
+// console.log(orderByDate(birthdays)); // Should return them ordered 1979, 1988, 1989, 1990
+// console.log(orderByDate(importantDates)); // Should return them ordered 2013, 2014, 2019
 
 
 
