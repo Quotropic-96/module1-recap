@@ -94,13 +94,36 @@ function orderByDate(arrOfObjects) {
 
 /// Iteration 5: new machine gun
 
-/* Your code goes here */
+class Weapon {
+    constructor(type, power, ammo = 10) {
+        this.type = type;
+        this.power = power;
+        this.ammo = ammo;
+        this.shootIntervalId = undefined;
+    }
+    shoot() {
+        this.shootIntervalId = setInterval(() => {
+            this.ammo--;
+            console.log(`Current ammo after shoot: ${this.ammo}`);
+        }, 30);
+    }
+    stopShooting() {
+        clearInterval(this.shootIntervalId);
+        console.log(`Stop shooting`);
+    }
+    reload(extraAmmo) {
+        setTimeout(() => {
+            this.ammo += extraAmmo;
+            console.log(`Current ammo after reload: ${this.ammo}`);
+        }, 2000);
+    }
+}
 
 // Iteration 5 tests
-// const machineGun = new Weapon('Machine gun', 90, 50);
-// console.log('Begin:')
-// machineGun.shoot();
-// setTimeout(() => machineGun.stopShooting(), 1000);
-// setTimeout(() => machineGun.reload(35), 1500);
+const machineGun = new Weapon('Machine gun', 90, 50);
+console.log('Begin:')
+machineGun.shoot();
+setTimeout(() => machineGun.stopShooting(), 1000);
+setTimeout(() => machineGun.reload(35), 1500);
 
 
