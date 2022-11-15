@@ -1,6 +1,14 @@
 /// Iteration 2: getMaxNum
 
-/* Your code goes here */
+function getMaxNum(numArr) {
+    filteredNumArr = numArr.filter((elem) => typeof elem === 'number');
+    return filteredNumArr.reduce((maxNum, val) => {
+        if (val > maxNum) {
+            maxNum = val;
+        }
+        return maxNum;
+    },0);
+}
 
 // Iteration 2 tests:
 // console.log(getMaxNum([45, 67, 12, 34])) // Should return 67
@@ -11,7 +19,15 @@
 
 /// Iteration 3: changeItem
 
-/* Your code goes here */
+function changeItem(arr, targetNum, newNum) {
+    return arr.map((elem) => {
+        if (elem === targetNum) {
+            return newNum;
+        }
+        return elem;
+    })
+}
+
 
 // Iteration 3 tests:
 // console.log(changeItem([3, 5, 7], 3, 4)) // Should return [4,5,7]
