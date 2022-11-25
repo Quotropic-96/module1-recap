@@ -9,6 +9,7 @@ body {
     font-size: 16px;
     color: antiquewhite;
     padding: 0 5%;
+    margin: 0;
 }
 
 /* Nav */
@@ -118,15 +119,29 @@ footer .footer-logos img {
     nav-bar {
         gap: 0;
     }
+    .nav-bar {
+        padding-top: 15px;
+    }
     .nav-bar .left-nav-bar ul {
         gap: 15px;
     }
     main {
-        width: 90%;
+        width: 100%;
         margin: 5% 0;
         align-items: center;
+        text-align: center;
     }
     main h1 {
         font-size: 3.5rem;
+        margin-bottom: 5%;
+    }
+    main .button-box {
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+    }
+    .footer-logos {
+        justify-content: space-around;
     }
 }
